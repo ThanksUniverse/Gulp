@@ -61,8 +61,6 @@
 
 # Rodar o projeto
 
-      - Executar o comando:
+-  Executar o comando:
 
-'''
-npm install
-'''
+   -  npm install
