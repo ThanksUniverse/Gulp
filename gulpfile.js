@@ -1,12 +1,15 @@
 const gulp = require("gulp");
-const { parallel  } = require("gulp");
+const { series, parallel  } = require("gulp");
 const concat = require("gulp-concat");
 const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const images = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
-const babel = require('gulp-babel')
+const babel = require('gulp-babel');
+const browserSync = require("browser-sync");
+const borwserSync = require('browser-sync').create()
+const reload = browserSync.reload
 
 function tarefasCSS(cb) {
 	 gulp.src([
@@ -74,13 +77,30 @@ function tarefasHTML(callback) {
 	 return callback()
 };
 
+gulp.task('server', function() {	//*Outra forma de criar funções
+
+	browserSync.init({
+		server: {
+			baseDir: "./dist"
+		}
+	})
+	gulp.watch("./assets/**/*").on("change", process);	//*Fica observando os arquivos para que atualize a página sempre que a pasta dist for atualizada
+	gulp.watch('./assets/**/*').on('change', reload)
+}) 
+
+//* Series x Parallel
+//* Series: Faz as funções em ordem
+//* Parallel: Faz todas as funções ao mesmo tempo
+
+const process = series( tarefasHTML, tarefasJS, tarefasCSS);
 
 exports.styles = tarefasCSS;
 exports.scripts = tarefasJS;
 exports.html = tarefasHTML;
 exports.images = tarefasIMG;
 
-exports.default = parallel( tarefasHTML, tarefasJS, tarefasCSS );
+
+exports.default = process
 
 //Gulp-concat Unifica os arquivos
 //Gulp-cssmin Minifica o CSS
