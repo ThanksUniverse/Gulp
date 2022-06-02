@@ -1,4 +1,4 @@
-# Gulp
+<!-- # Gulp
 
 -  Gerenciador de Tarefas (baseado em JavaScript)
 -  Descompactar Arquivos
@@ -57,10 +57,14 @@
       - Organização do projeto
       - Otimização de arquivos
       - Mesclagem e Minificação de CSS e JS
-      - Diminuição do tamanho (bytes) de imagens
+      - Diminuição do tamanho (bytes) de imagens -->
 
 # Rodar o projeto
 
 -  Executar o comando:
 
-   -  npm install
+   ```
+   npm install
+
+   gulp server
+   ```
