@@ -10,9 +10,13 @@
 	"author": "Pedro",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/core": "^7.18.2",
+		"@babel/preset-env": "^7.18.2",
 		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-cssmin": "^0.2.0",
+		"gulp-htmlmin": "^5.0.1",
 		"gulp-image": "^6.3.1",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-rename": "^2.0.0",
