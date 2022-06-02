@@ -88,11 +88,16 @@ gulp.task('server', function() {	//*Outra forma de criar funções
 	gulp.watch('./assets/**/*').on('change', reload)
 }) 
 
+function done(cb) {
+	console.log('Done')
+	return cb()
+}
+
 //* Series x Parallel
 //* Series: Faz as funções em ordem
 //* Parallel: Faz todas as funções ao mesmo tempo
 
-const process = series( tarefasHTML, tarefasJS, tarefasCSS);
+const process = series( tarefasHTML, tarefasJS, tarefasCSS, done);
 
 exports.styles = tarefasCSS;
 exports.scripts = tarefasJS;
