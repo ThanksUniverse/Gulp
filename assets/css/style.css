@@ -67,15 +67,15 @@ a {
 	position: relative;
 	padding: 25px 0px;
 }
-.bg-dark {
+/* .bg-dark {
 	background-color: #fff !important;
 	border-bottom: 1px solid #eee;
-}
+} */
 #navbarResponsive {
 	z-index: 999;
 	position: absolute;
 	left: 50%;
-	top: 105px;
+	top: 128px;
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
@@ -86,6 +86,12 @@ a {
 	font-size: 15px;
 	font-weight: 700;
 	color: #1e1e1e;
+	transition: all 0.5s;
+}
+.navli{
+	font-size: 15px;
+	font-weight: 700;
+	color: white !important; 
 	transition: all 0.5s;
 }
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -734,4 +740,98 @@ a {
 	background-color: rgb(202, 202, 202);
 	filter: brightness(110%);
 	transform: translateY(-1px);
+}
+
+::placeholder {
+	color: #fff;
+}
+
+#email {
+	position: relative;
+}
+
+.invalid {
+	border-color: #f00;
+}
+
+.text-muted {
+	display: none;
+}
+
+.darkModei {
+	content: url("../images/dark-mode.png");
+}
+
+.whiteModei {
+	content: url('../images/white-mode.png');
+}
+
+textarea {
+	resize: none;
+}
+
+.aboutme {
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+
+.aboutmeimg {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.aboutmeimg img {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	border-radius: 50%;
+	margin: 0 auto;
+	bottom: 50px;
+}
+
+.aboutmetxt h5 {
+	position: relative;
+	bottom: 50px !important;
+	text-align: center;
+}
+
+.aboutmetxt p, h3 {
+	position: relative;
+	bottom: 40px;
+	text-align: center;
+}
+
+.aboutmebtn {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.aboutmebtn a {
+	position: relative;
+	width: 49%;
+	bottom: 54px;
+}
+
+#model-pedro > div > div > div.modal-body {
+	background-color: transparent;
+	
+}
+
+#model-pedro > div > div {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 40px;
+	width: 360px;
+}
+
+#model-pedro > div > div > div.modal-header {
+	background-color: transparent;
+}
+
+#emails::placeholder {
+	color: white;
 }
