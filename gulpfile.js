@@ -40,7 +40,7 @@ function tarefasJS(callback) {
 		.pipe(babel({
 			comments: false,
 			presets: ['@babel/env'],
-			comapct: true
+			compact: true
 		}))
 		.pipe(concat("scripts.js"))
 		.pipe(uglify())
